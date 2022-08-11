@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <title>You Meet in a Tavern</title>
+</head>
+<body class="index d-flex justify-content-center">
+    <div class="container index_card">
+        <div class="jumbotron">
+            <img src="/static/img/logo4.png">
+            <hr class="my-4">
+            <img src="/static/img/subheader.png">
+        </div>
+        <div class="row">
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <img src="/static/img/register.png">
+                <form action="/user/create" method="post">
+                    <div class="mb-3">
+                        <input class="form-control" type="text" name="username" id="username" placeholder="Username">
+                        {% for message in get_flashed_messages(category_filter=["err_user_username"])%}
+                        <p class="alert alert-danger">{{ message }}</p>
+                        {% endfor %}
+                    </div>
+                    <div class="mb-3">
+                        <input class="form-control" type="text" name="email" id="email" placeholder="Email">
+                        {% for message in get_flashed_messages(category_filter=["err_user_email"])%}
+                        <p class="alert alert-danger">{{ message }}</p>
+                        {% endfor %}
+                    </div>
+                    <div class="mb-3">
+                        <input class="form-control" type="password" name="pw" id="pw" placeholder="Password">
+                        {% for message in get_flashed_messages(category_filter=["err_user_pw"])%}
+                        <p class="alert alert-danger">{{ message }}</p>
+                        {% endfor %}
+                    </div>
+                    <div class="mb-3">
+                        <input class="form-control" type="password" name="confirm_pw" id="confirm_pw" placeholder="Confirm Password">
+                        {% for message in get_flashed_messages(category_filter=["err_user_confirm_pw"])%}
+                        <p class="alert alert-danger">{{ message }}</p>
+                        {% endfor %}
+                    </div>
+                    <button class="button-74" role="button">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

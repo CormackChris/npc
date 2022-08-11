@@ -1,0 +1,161 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <title>NPC Generator</title>
+    </head>
+    <body>
+        <ul class="nav justify-content-center">
+            <li class="nav-item button-74 m-3">
+                <a class="nav-link active" aria-current="page" href="user/logout">Logout</a>
+            </li>
+            <li class="nav-item button-74 m-3">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+        </ul>
+        <div class="container">
+            <div class="row">
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <h2>Editing </h2>
+                    <form action="/character/create" method="post">
+                        <div class="mb-3">
+                            <label for="genre">Select Genre</label>
+                            <select name="genre" id="genre">
+                            <option value="" selected></option>
+                            <option value="Fantasy">Fantasy</option>
+                            <option value="Modern">Modern</option>
+                            <option value="Sci-Fi">Sci-Fi</option>
+                            <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <input class="form-control" type="text" name="name" id="name" value="">
+                            <div class="mb-3">
+                                <label for="gender">Gender</label>
+                                <select name="gender" id="gender">
+                                    <option value="" selected></option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                            <div class="mb-3">
+                                <label for="genre">Age Group</label>
+                                <select name="age" id="age">
+                                    <option value="" selected></option>
+                                <option value="Child/Teen">Child/Teen</option>
+                                <option value="Young Adult">Young Adult</option>
+                                <option value="Adult">Adult</option>
+                                <option value="Middle-Aged">Middle-Aged</option>
+                                <option value="Elder">Elder</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="role">Role</label>
+                                <select name="role" id="role">
+                                    <option value="" selected></option>
+                                <option value="Bodyguard">Bodyguard</option>
+                                <option value="Sidekick">Sidekick</option>
+                                <option value="Mentor">Mentor</option>
+                                <option value="Guide">Guide</option>
+                                <option value="Merchant">Merchant</option>
+                                <option value="Leader">Leader</option>
+                                <option value="Engineer">Engineer</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="personality_one">Personality - Primary</label>
+                                <select name="personality_one" id="personality_one">
+                                <option value="" selected></option>
+                                <option value="Friendly">Friendly</option>
+                                <option value="Cantankerous">Cantankerous</option>
+                                <option value="Contemplative">Contemplative</option>
+                                <option value="Quiet">Quiet</option>
+                                <option value="Aloof">Aloof</option>
+                                <option value="Arrogant">Arrogant</option>
+                                <option value="Commanding">Commanding</option>
+                                <option value="Mischevious">Mischevious</option>
+                                <option value="Intellectual">Intellectual</option>
+                                <option value="Creative">Creative</option>
+                                <option value="Passionate">Passionate</option>
+                                <option value="Curmudgeonly">Curmudgeonly</option>
+                                <option value="Kind">Kind</option>
+                                <option value="Generous">Generous</option>
+                                <option value="Selfish">Selfish</option>
+                                <option value="Cowardly">Cowardly</option>
+                                <option value="Untrustworthy">Untrustworthy</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="personality_two">Personality - Secondary</label>
+                                <select name="personality_two" id="personality_two">
+                                <option value="" selected></option>
+                                <option value="Friendly">Friendly</option>
+                                <option value="Cantankerous">Cantankerous</option>
+                                <option value="Contemplative">Contemplative</option>
+                                <option value="Quiet">Quiet</option>
+                                <option value="Aloof">Aloof</option>
+                                <option value="Arrogant">Arrogant</option>
+                                <option value="Commanding">Commanding</option>
+                                <option value="Mischevious">Mischevious</option>
+                                <option value="Intellectual">Intellectual</option>
+                                <option value="Creative">Creative</option>
+                                <option value="Passionate">Passionate</option>
+                                <option value="Curmudgeonly">Curmudgeonly</option>
+                                <option value="Kind">Kind</option>
+                                <option value="Generous">Generous</option>
+                                <option value="Selfish">Selfish</option>
+                                <option value="Cowardly">Cowardly</option>
+                                <option value="Untrustworthy">Untrustworthy</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="personality_three">Personality - Tertiary</label>
+                                <select name="personality_three" id="personality_three">
+                                <option value="" selected></option>
+                                <option value="Friendly">Friendly</option>
+                                <option value="Cantankerous">Cantankerous</option>
+                                <option value="Contemplative">Contemplative</option>
+                                <option value="Quiet">Quiet</option>
+                                <option value="Aloof">Aloof</option>
+                                <option value="Arrogant">Arrogant</option>
+                                <option value="Commanding">Commanding</option>
+                                <option value="Mischevious">Mischevious</option>
+                                <option value="Intellectual">Intellectual</option>
+                                <option value="Creative">Creative</option>
+                                <option value="Passionate">Passionate</option>
+                                <option value="Curmudgeonly">Curmudgeonly</option>
+                                <option value="Kind">Kind</option>
+                                <option value="Generous">Generous</option>
+                                <option value="Selfish">Selfish</option>
+                                <option value="Cowardly">Cowardly</option>
+                                <option value="Untrustworthy">Untrustworthy</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="alignment">Disposition</label>
+                                <select name="alignment" id="alignment">
+                                    <option value="" selected></option>
+                                <option value="Lawful">Lawful</option>
+                                <option value="Chaotic">Chaotic</option>
+                                <option value="Neutral">Neutral</option>
+                                </select>
+                            </div>
+                            <div>
+                                <textarea id="notes" name="notes" rows="4" cols="50" value=""></textarea>
+                            </div>
+                        <button class="btn btn-success">Submit</button.btn>
+                    </form>
+                </div>
+        </div>
+    
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    </body>
+    </html>
