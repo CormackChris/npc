@@ -36,6 +36,14 @@ class User:
         return False
 
     @classmethod
+    def get_one_by_username(cls, data:dict) -> list:
+        query = "SELECT * FROM users WHERE username = %(username)s;"
+        results = connectToMySQL(DATABASE).query_db(query, data)
+        if results:
+            return cls(results[0])
+        return False
+
+    @classmethod
     def get_all(cls) -> list:
         query = "select * FROM users;"
         results = connectToMySQL(DATABASE).query_db(query)
@@ -62,6 +70,12 @@ class User:
         if len(data["username"]) < 3:
             is_valid = False
             flash("field is required", "err_user_username")
+            
+        else:
+            potential_user = User.get_one_by_username({'username': data['username']})
+            if potential_user:
+                flash("Username already exists!", "err_user_username")
+                is_valid = False
 
         if len(data["email"]) < 3:
             is_valid = False
@@ -76,7 +90,6 @@ class User:
             if potential_user:
                 flash("Email address already exists!", "err_user_email")
                 is_valid = False
-
 
         if len(data["pw"]) < 8:
             is_valid = False
